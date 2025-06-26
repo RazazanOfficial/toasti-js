@@ -1,0 +1,132 @@
+.toasti-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+.toasti {
+  min-width: 280px;
+  max-width: 360px;
+  padding: 16px 20px 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  pointer-events: auto;
+  opacity: 0.95;
+  animation: fadein 0.3s;
+  overflow: hidden;
+}
+
+.toasti.success {
+  background-color: #e6fff0;
+  color: #28a745;
+}
+.toasti.error {
+  background-color: #ffecec;
+  color: #dc3545;
+}
+.toasti.warning {
+  background-color: #fff8e1;
+  color: #ffc107;
+}
+.toasti.info {
+  background-color: #e7f3ff;
+  color: #17a2b8;
+}
+
+.toasti .close-btn {
+  border: none;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.toasti.success .close-btn {
+  background-color: #28a74533;
+  color: #28a745;
+}
+.toasti.error .close-btn {
+  background-color: #dc354533;
+  color: #dc3545;
+}
+.toasti.warning .close-btn {
+  background-color: #ffc10733;
+  color: #ffc107;
+}
+.toasti.info .close-btn {
+  background-color: #17a2b833;
+  color: #17a2b8;
+}
+
+.toasti .progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: currentColor;
+  animation: progress linear forwards;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 0.95; transform: translateY(0); }
+}
+
+@keyframes fadeout {
+  from { opacity: 0.95; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}
+
+@keyframes progress {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+  .toasti-container {
+    left: 0.5rem;
+    right: 0.5rem;
+    top: auto;
+    bottom: 1rem;
+    align-items: center;
+  }
+
+  .toasti {
+    width: 100%;
+    max-width: 90vw;
+    font-size: 14px;
+  }
+
+  .toasti .close-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+
+  .toasti .progress-bar {
+    height: 3px;
+  }
+}

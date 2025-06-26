@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toasti Demo || Meraj Razazan</title>
+  <link rel="stylesheet" href="demo.css" />
+  <link rel="icon" type="image/x-icon" href="logo.jpg" />
+</head>
+<body>
+  <div class="demo-wrapper">
+    <h1>Toasti Demo 🍞</h1>
+    <p>Click a button to show a toast notification:</p>
+    <div class="button-group">
+      <button class="btn success" onclick="toast.success('Success! Everything is fine.')">Success</button>
+      <button class="btn error" onclick="toast.error('Oops! Something went wrong.')">Error</button>
+      <button class="btn warning" onclick="toast.warning('Warning! Be careful.')">Warning</button>
+      <button class="btn info" onclick="toast.info('Just so you know...')">Info</button>
+    </div>
+    <footer class="footer">
+      &copy; 2025 Meraj Razazan
+    </footer>
+  </div>
+
+  <script src="demo.js"></script>
+</body>
+</html>
