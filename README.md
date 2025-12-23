@@ -52,14 +52,6 @@ See the demo **live in your browser**:
 
 [![Live Demo](https://img.shields.io/badge/live-demo-green?style=for-the-badge&logo=github)](https://razazanofficial.github.io/toasti-js/)
 
-<a href="https://razazanofficial.github.io/toasti-js/" target="_blank">
-  <img src="https://img.shields.io/badge/live-demo-green?style=for-the-badge&logo=github" alt="Live Demo">
-</a>
-
-<a href="https://razazanofficial.github.io/toasti-js/" target="_blank" rel="noopener noreferrer">
-  ![Live Demo](https://img.shields.io/badge/live-demo-green?style=for-the-badge&logo=github)
-</a>
-
 
 ---
 
